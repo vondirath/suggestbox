@@ -7,9 +7,10 @@
 css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-app="SuggestionBox" ng-controller="HomeController">
-<div ng-repeat="x in posts | orderBy: '-upvotes'" class="col-md-6">
-<h1>{{ x.title }}</h1>
-
+<div ng-repeat="post in posts" class="col-md-6">
+<h1>{{ post.title }}</h1>
+<p>{{ post.upvotes }}</p>
+<p>{{ post.comments }}</p>
 <p>
 <span class="glyphicon glyphicon-plus-sign" ng-click="upVote($index)"></span> Upvotes: {{ post
 .upvotes }}
