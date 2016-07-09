@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Suggestion Box</title>
+<script type="text/javascript" src="js/vendor/angular.min.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/
+css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app="SuggestionBox" ng-controller="HomeController">
+<div ng-repeat="x in posts | orderBy: '-upvotes'" class="col-md-6">
+<h1>{{ x.title }}</h1>
+
+<p>
+<span class="glyphicon glyphicon-plus-sign" ng-click="upVote($index)"></span> Upvotes: {{ post
+.upvotes }}
+</p>
+</div>
+
+ <form ng-submit="addSuggestion()" style="margin-top: 50px">
+<h3> Submit Your Suggestion </h3>
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
+</div>
+<button type="submit" class="btn btn-primary">Suggest</button>
+</form>
+
+
+
+<!-- Modules -->
+<script type="text/javascript" src="js/app.js"></script>
+ 
+<!-- Controllers -->
+<script type="text/javascript" src="js/controllers/HomeController.js"></script>
+ 
+<!-- Services -->
+<script type="text/javascript" src="js/services/data.js"></script>
+</body>
+</html>
