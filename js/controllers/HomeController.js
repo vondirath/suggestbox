@@ -19,7 +19,7 @@ app.controller('HomeController', [
 	$scope.title = '';
 };
 $scope.upVote = function(index) {
-	$scope.posts[index] += 1;
+	$scope.posts[index].upvotes += 1;
 };
 }]);
 
