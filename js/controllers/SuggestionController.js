@@ -1,16 +1,15 @@
-app.controller('SuggestionController', ['$scope','suggestions', '$routeParams', function ($scope, suggestions, $routeParams) {
+app.controller('SuggestionController', ['$scope', '$routeParams', 'suggestions', function ($scope, $routeParams, suggestions) {
 
     $scope.post = suggestions.posts[$routeParams.id];
     
-    $scope.comments = [];
-    
     $scope.addComment = function ( ) {
-            $scope.posts.comments.push({
-                body: [],
+            $scope.post.comments.push({
+                body: $scope.body,
                 upvotes: 0,
             });
+        $scope.body='';
             };  
-    $scope.upVote = function (comment) {
-            $scope.posts[comment].upvotes += 1;
+    $scope.upVote = function(comment) {
+            comment.upvotes += 1;
             };
 }]);
