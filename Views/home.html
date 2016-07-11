@@ -4,7 +4,7 @@
     <h1>{{post.title}}</h1>
     <p>
         <span class="glyphicon glyphicon-plus-sign" ng-click="upVote($index)"></span>
-        <span class="entry-subtext">Upvotes: {{ post.upvotes }} | <a href="#/posts/{{ post.id }}">Comments</a></span>
+        <span class="entry-subtext">Upvotes: {{ post.upvotes }} | <a href="#/posts/{{ $index }}">Comments</a></span>
     </p>
 </div>
 
