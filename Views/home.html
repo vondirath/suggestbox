@@ -1,0 +1,7 @@
+<div ng-repeat="post in posts | orderBy: '-upvotes'" class="col-md-6">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.comments }}</p>
+    <p>
+        <span class="glyphicon glyphicon-plus-sign" ng-click="upVote($index)"></span> Upvotes: {{ post.upvotes }}
+    </p>
+</div>
