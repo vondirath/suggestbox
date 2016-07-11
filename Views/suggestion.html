@@ -1,7 +1,12 @@
 <h1>{{ post.title }} </h1>
+
 <div ng-repeat="x in post">
     <p>{{ x.body }}</p>
-    <p>{{ x.upvotes }}</p>
+    
+     <p>
+        <span class="glyphicon glyphicon-plus-sign" ng-click="upVote($index)"></span>
+         <span class="entry-subtext">Upvotes: {{ x.upvotes }}</span></p>
+    
 </div>
 
 <form ng-submit="addComment()" style="margin-top: 50px">
