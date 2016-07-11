@@ -1,0 +1,13 @@
+<h1>{{ post.title }} </h1>
+<div ng-repeat="posts in post.comments ">
+{{ posts.body }}
+{{ posts.upvotes }}
+</div>
+<form ng-submit="addSuggestion()" style="margin-top: 50px">
+    <h3>Submit your suggestion</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Suggest</button>
+</form>
+<form data-ng-submit="addComment(comments)"><button type="submit">Submit</button> </form>

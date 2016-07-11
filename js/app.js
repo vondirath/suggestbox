@@ -9,9 +9,9 @@ app.config(function($routeProvider) {
     })
 
     // route for individual suggestion page
-    .when('/suggestion/:id', {
-        controller: 'SuggestionController',
-        templateUrl: 'views/suggestion.html'
+    .when('/posts/:id', {
+        controller: 'PostsController',
+        templateUrl: 'views/posts.html'
     })
 
     // otherwise, go home
