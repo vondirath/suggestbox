@@ -2,10 +2,19 @@ var app = angular.module('SuggestionBox', ['ngRoute']);
 
 app.config(function($routeProvider) {
     $routeProvider
-    .when( '/', {
+    // route for the home page
+        .when('/', {
         controller: 'HomeController',
-        templateUrl: 'Views/home.html'
+        templateUrl: 'views/home.html'
     })
+
+    // route for individual suggestion page
+    .when('/suggestion/:id', {
+        controller: 'SuggestionController',
+        templateUrl: 'views/suggestion.html'
+    })
+
+    // otherwise, go home
     .otherwise({
         redirectTo: '/'
     });
